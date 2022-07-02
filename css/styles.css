@@ -7,6 +7,9 @@
     --hover-button-color: rgba(255, 255, 255, 1);
     --border-color: rgba(236, 236, 236, 1);
     --body-bgd: rgba(255, 255, 255, 1);
+    --fill-color: rgba(117, 117, 117, 1);
+    --fill-social-link-color: rgba(175, 177, 184, 1);
+    --footer-bgd-color: rgba(255, 255, 255, 0.1);
 }
 /* system */
 html {
@@ -84,7 +87,7 @@ p{
     /* max-width: 1600px; */
     border-bottom: 1px solid var(--border-color) ;
     margin: 0 auto;
-    
+
 }
 
 .nav{
@@ -115,7 +118,7 @@ p{
 .navigation .link{
 
     display: block;
-    
+
 }
 .link{
     font-family: 'Roboto', sans-serif;
@@ -129,6 +132,7 @@ p{
 
 }
 
+
 .link-contacts{
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
@@ -138,12 +142,38 @@ p{
     line-height: 1.1;
     letter-spacing: 0.02em;
     color: var(--info-text-color);
-    display: block;
-   
+    display: flex;
+
 }
-.link-contacts:hover{
+
+
+.callback{
+    display: flex;
+}
+
+.contact-smartphone{
+    fill: var(--fill-color);
+}
+.contact-icon{
+    fill: var(--fill-color);
+}
+/* .contact-smartphone:hover{
+    fill: var(--accent);
+} */
+
+.callback-items  li :hover{
     color: var(--accent);
+    fill: var(--accent);
 }
+.link-contacts:hover .contact-smartphone{
+    color: var(--accent);
+    fill: var(--accent);
+}
+.link-contacts:hover .contact-icon{
+    color: var(--accent);
+    fill: var(--accent);
+}
+
 
 /*header*/
 .navigation   {
@@ -173,13 +203,27 @@ p{
 .contacts .item{
     margin-right: 50px;
 }
+
+.contact-icon{
+    width: 16px;
+    height: 12px;
+    margin-right: 8px;
+
+}
+
+.contact-smartphone{
+    width: 10px;
+    height: 16px;
+    margin-right: 8px;
+}
+
 .contacts .item:last-child{
     margin-right: 0;
 }
 .header-navigation{
     display: flex;
     align-items: center;
-    
+
 }
 
 .main-order{
@@ -205,8 +249,8 @@ p{
 
 
 .main-header{
-    
-    
+
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.4;
@@ -238,6 +282,7 @@ p{
 .order-button:hover{
     background-color: #188ce8;
 }
+/* benefits */
 .benefits-content{
     display: flex;
 
@@ -272,6 +317,18 @@ p{
     color: var(--info-text-color);
     margin-top: 10px;
 }
+.benefits-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+   width: 270px;
+   height: 120px;
+   background-color:var(--bgd-secondary-color);
+   border-radius: 4px;
+}
+/* what-we-do */
 .what-we-do{
     padding-top: 0;
 }
@@ -283,7 +340,7 @@ p{
 
 }
 .what-we-do-header{
-    
+
     font-size: 36px;
     line-height: 1.2;
     text-align: center;
@@ -292,14 +349,18 @@ p{
     margin-bottom: 50px;
     margin-top: 0;
 }
-.our-team{
+/* team */
 
+.our-team{
     background-color: var(--bgd-secondary-color);
-    
 
 }
+.our-team-item{
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
 .team-header{
-    
+
     font-size: 36px;
     line-height: 1.2;
     text-align: center;
@@ -307,9 +368,9 @@ p{
     text-align: center;
     color: var(--title-text-color);
     margin-bottom: 50px;
-    
-    
-    
+
+
+
 }
 .our-team-sub-header{
     display: block;
@@ -318,11 +379,12 @@ p{
     font-weight: 500;
     font-size: 16px;
     line-height: 1.2;
-    text-align: center;
     letter-spacing: 0.03em;
+    text-align: center;
+
     color: var(--title-text-color);
     padding-top: 30px;
-    
+
 }
 .our-team-text{
     display: block;
@@ -344,6 +406,93 @@ p{
 }
 .our-team-item:not(:last-child){
     margin-right: 30px;
+}
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* це не працює для svg? можно якось вирівняти по центру? */
+    padding-top: 16px;
+    padding-bottom: 30px;
+
+}
+.team-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+}
+.team-icons:not(:last-child){
+    margin-right: 10px;
+}
+.icon-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 46px;
+    height: 46px;
+}
+.icon-link:hover {
+    background-color: var(--accent);
+    border-radius: 50%;
+}
+ .social-icon:hover{
+    fill: var(--body-bgd);
+}
+.social-icon{
+
+    fill: var(--fill-social-link-color);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    padding-top: 12px;
+    padding-left: 12px;
+}
+.our-team-content{
+    background-color: var(--body-bgd);
+}
+
+/* clients */
+.clients-header{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.03em;
+}
+.our-clients{
+    display: flex;
+}
+.clients-item{
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clietns-logo{
+    fill: var(--fill-social-link-color);
+}
+.clients-item:hover .clietns-logo{
+    fill: var(--accent);
+}
+.clients-item:hover{
+    border: 1px solid var(--accent);
+
+}
+.clients-item:not(:last-child){
+    margin-right: 30px;
+}
+.clietns-logo{
+    width: 106px;
+    height: 60px;
 }
 
 
@@ -370,7 +519,12 @@ p{
     display: flex;
     margin-bottom: 50px;
     justify-content: center;
-    
+
+}
+.buttons > li .current{
+    color: var(--hover-button-color);
+    background-color: var(--accent);
+    border-radius: 4px;
 }
 .content-button{
     border-radius: 4px;
@@ -379,21 +533,18 @@ p{
     margin-right: 8px;
 }
 
-.content-button .current{
-    color: var(--hover-button-color);
-    background-color: var(--accent);
-    border-radius: 4px; 
-}
+
+
 .buttons :hover{
     color: var(--hover-button-color);
     background-color: var(--accent);
-    border-radius: 4px;   
+    border-radius: 4px;
 }
 .buttons :focus{
-     
+
 }
 
-
+/* works */
 .our-works-header{
     display: none;
 }
@@ -443,16 +594,19 @@ p{
 }
 .our-works-item:nth-child(n + 7){
     margin-bottom: 0px;
-
+}
+.our-works-item:hover{
+    border: 1px solid #EEEEEE;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 
-
+/* footer */
 
 .footer{
     background-color: rgba(47, 48, 58, 1);
     padding: 60px 0;
-    
+
 
 
 }
@@ -467,7 +621,7 @@ p{
     line-height: 1.2;
     letter-spacing: 0.03em;
     margin-bottom: 20px;
-    
+
 }
 
 
@@ -503,4 +657,64 @@ p{
 .link-contacts-footer:focus{
     color: var(--accent);
 }
+.footer-icons{
+    display: flex;
+    padding-bottom: 40px;
+}
+.footer-social-links{
+    display: flex;
+}
+
+.footer-header{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--body-bgd);
+    text-align: left;
+    padding-bottom: 20px;
+    padding-top: 12px;
+}
+.team-icons-footer{
+    width: 44px;
+    height: 44px;
+}
+.team-icons-footer:not(:last-child){
+    margin-right: 10px;
+
+}
+.social-icon-footer{
+
+    fill: var(--body-bgd);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    padding-top: 12px;
+    padding-left: 12px;
+
+}
+.icon-link-footer{
+    background-color: var(--footer-bgd-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 46px;
+    height: 46px;
+}
+.icon-link-footer:hover{
+    background-color: var(--accent);
+
+}
+.our-links{
+    margin-left: 70px;
+}
+
+
 
