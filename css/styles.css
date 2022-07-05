@@ -151,7 +151,7 @@ p{
     display: flex;
 }
 
-.contact-phone{
+.contact-smartphone{
     fill: var(--fill-color);
 }
 .contact-icon{
@@ -161,18 +161,26 @@ p{
     fill: var(--accent);
 } */
 
-.callback-items  li :hover{
+.callback-items  li :hover,
+.callback-items  li :focus
+{
     color: var(--accent);
     fill: var(--accent);
 }
-.link-contacts:hover .contact-phone{
+.link-contacts:hover .contact-smartphone,
+.link-contacts:focus .contact-smartphone
+{
     color: var(--accent);
     fill: var(--accent);
 }
-.link-contacts:hover .contact-icon{
+.link-contacts:hover .contact-icon,
+.link-contacts:focus .contact-icon
+{
     color: var(--accent);
     fill: var(--accent);
 }
+
+
 
 
 /*header*/
@@ -425,12 +433,15 @@ p{
     
     
 }
-.icon-link:hover{
+.icon-link:hover,
+.icon-link:focus{
     background-color: var(--accent);
     border-radius: 50%;
     
 }
- .social-icon:hover{
+  .icon-link:hover .social-icon,
+  .icon-link:focus .social-icon
+  {
     fill: var(--body-bgd);
 }
 .social-icon{
@@ -506,6 +517,7 @@ p{
     color: var(--title-text-color);
     border: none;
     padding: 6px 22px 6px 22px;
+    cursor: pointer;
 
 }
 .buttons{
@@ -528,14 +540,16 @@ p{
 
 
 
-.buttons :hover{
+.buttons :hover,
+.buttons :focus
+{
     color: var(--hover-button-color);
     background-color: var(--accent);
     border-radius: 4px;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px
 }
-.buttons :focus{
 
-}
 
 /* works */
 .our-works-header{
@@ -568,25 +582,41 @@ p{
     text-align: left;
     padding-left: 24px;
     padding-bottom: 20px;
+    
 
 }
 .our-works{
     display: flex;
     flex-wrap:  wrap;
 }
+
 .our-works-item{
     margin-bottom: 30px;
 
     width: 370px;
     margin-right: 30px;
 }
+
+
 .our-works-item:nth-child(3n){
     margin-right: 0px;
 }
 .our-works-item:nth-child(n + 7){
     margin-bottom: 0px;
 }
-.our-works-item:hover{
+ 
+.our-works-item:hover,
+.our-works-item:focus{
+    border: 1px solid #EEEEEE;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.our-works-link{
+    text-decoration: none;
+}
+
+.our-works-link:hover,
+.our-works-link:focus{
     border: 1px solid #EEEEEE;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
