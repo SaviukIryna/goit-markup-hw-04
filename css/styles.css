@@ -486,10 +486,14 @@ p{
 .clietns-logo{
     fill: var(--fill-social-link-color);
 }
-.clients-link:hover .clietns-logo{
+.clients-link:hover .clietns-logo,
+.clients-link:focus .clietns-logo
+{
     fill: var(--accent);
 }
-.clients-link:hover{
+.clients-link:hover,
+.clients-link:focus
+{
     border: 1px solid var(--accent);
 
 }
