@@ -720,7 +720,8 @@ p{
     width: 44px;
     height: 44px;
 }
-.icon-link-footer:hover{
+.icon-link-footer:hover,
+.icon-link-footer:focus{
     background-color: var(--accent);
 
 }
